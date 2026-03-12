@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --blue: #224c87;
+  --blue-light: #2d5fa3;
+  --blue-dark: #1a3a68;
+  --red: #da3832;
+  --grey: #919090;
+  --grey-light: #f0f0f0;
+  --grey-mid: #d0d0d0;
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-mid: #4a4a6a;
+  --bg-page: #f5f7fb;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', Arial, Verdana, sans-serif;
+  background: var(--bg-page);
+  color: var(--text-dark);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: 'Montserrat', Arial, Verdana, sans-serif;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input {
+  font-family: 'Montserrat', Arial, Verdana, sans-serif;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--grey-mid); border-radius: 3px; }
+
+.phone-shell {
+  width: 100%;
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: #fff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .phone-shell {
+    max-width: 768px;
+    min-height: 100dvh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+/* Desktop / Laptop */
+@media (min-width: 1024px) {
+  body {
+    background: linear-gradient(135deg, #e8eef8 0%, #f5f7fb 50%, #edf1f8 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+
+  .phone-shell {
+    max-width: 1200px;
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 auto;
+  }
+}
+:focus-visible {
+  outline: 3px solid #224c87;
+  outline-offset: 3px;
+  border-radius: 4px;
+}

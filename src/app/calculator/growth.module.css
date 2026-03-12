@@ -1,0 +1,369 @@
+.wrapper {
+  flex: 1;
+  padding: 24px 20px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 60px 24px;
+}
+
+.emptyText {
+  font-size: 14px;
+  color: var(--grey);
+  text-align: center;
+}
+
+.chartBox {
+  background: var(--grey-light);
+  border-radius: 16px;
+  padding: 20px 12px 16px 0;
+  width: 100%;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.card {
+  background: var(--grey-light);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardAccent {
+  background: var(--blue);
+  grid-column: span 2;
+}
+
+.cardAccent .cardLabel { color: rgba(255,255,255,0.7); }
+.cardAccent .cardValue { color: var(--white); font-size: 26px; }
+
+.cardLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--grey);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.cardValue {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 8px;
+}
+
+.investBtn {
+  width: 100%;
+  background: var(--blue);
+  color: var(--white);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 18px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.investBtn:hover {
+  background: var(--blue-light);
+  transform: translateY(-1px);
+}
+
+.reselectBtn {
+  width: 100%;
+  background: var(--white);
+  color: var(--blue);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 18px;
+  border-radius: 100px;
+  border: 2px solid var(--blue);
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.reselectBtn:hover {
+  background: #eef3fb;
+  transform: translateY(-1px);
+}
+
+.summaryPanel { display: none; }
+
+.summaryPanelTitle {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--blue);
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.summaryItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 0;
+  border-bottom: 1px solid #dde6f5;
+}
+
+.summaryItemLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--grey);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.summaryItemValue {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+}
+
+.summaryItemSub {
+  font-size: 11.5px;
+  color: var(--grey);
+  margin-top: 2px;
+}
+
+.summaryBreakdown {
+  background: var(--blue);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summaryBreakdownTitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.summaryBreakdownRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.summaryBreakdownRow:last-child {
+  border-bottom: none;
+}
+
+.summaryBreakdownLabel {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+}
+
+.summaryBreakdownValue {
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+}
+
+.growthNote {
+  font-size: 11px;
+  color: var(--grey);
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ===== TABLET ===== */
+@media (min-width: 768px) {
+  .wrapper { padding: 28px 32px 36px; }
+  .cards { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .cardAccent { grid-column: span 2; }
+  .actions { flex-direction: row; }
+  .investBtn { flex: 1; }
+  .reselectBtn { flex: 1; }
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 1024px) {
+  .wrapper {
+    padding: 36px 48px 40px;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    grid-template-rows: auto auto auto auto;
+    column-gap: 32px;
+    row-gap: 20px;
+    align-items: start;
+  }
+
+  .chartBox {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cardAccent {
+    grid-column: span 2;
+  }
+
+  .actions {
+    grid-column: 1;
+    grid-row: 3;
+    flex-direction: row;
+    padding-bottom: 0;
+  }
+
+  .investBtn { flex: 1; }
+  .reselectBtn { flex: 1; }
+
+  .summaryPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    grid-column: 2;
+    grid-row: 1 / 5;
+    background: linear-gradient(160deg, #eef3fb 0%, #f5f7fb 100%);
+    border-radius: 20px;
+    border: 1.5px solid #dde6f5;
+    padding: 24px;
+    position: sticky;
+    top: 24px;
+    align-self: start;
+  }
+}
+
+/* ===== DONUT ===== */
+.donutBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.donutTitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--grey);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  align-self: flex-start;
+}
+
+.donutChartWrap {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+
+.donutCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.donutCenterLabel {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--grey);
+  letter-spacing: 0.08em;
+}
+
+.donutCenterValue {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-top: 2px;
+}
+
+.donutLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.donutLegendItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.donutDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.donutLegendText {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.donutLegendLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--grey);
+}
+
+.donutLegendValue {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.summaryDivider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+  margin: 8px 0;
+}
+
+@media (min-width: 1280px) {
+  .wrapper {
+    padding: 40px 80px 48px;
+    column-gap: 48px;
+  }
+}

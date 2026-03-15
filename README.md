@@ -1,6 +1,5 @@
 # StepWise
-FinCal Innovation Hackathon
-# FinCal — Goal-Based Investment Calculator
+## Goal-Based Investment Calculator
 
 A modern, accessible, and interactive financial calculator built for the **FinCal Innovation Hackathon** at Technex '26, co-sponsored by **HDFC Mutual Fund**.
 
@@ -8,7 +7,7 @@ A modern, accessible, and interactive financial calculator built for the **FinCa
 
 ## About
 
-FinCal helps users estimate how much they need to invest every month to achieve a specific financial goal — whether that's buying a house, funding higher education, planning a wedding, or retiring comfortably.
+FinCal helps users estimate how much they need to invest every month to achieve a specific financial goal — whether that's buying a house, funding higher education, planning a wedding, or retiring comfortably. The purpose of this was to create an educational and intuitive calculator which makes mutual fund investment more accessible to the public.
 
 The calculator accounts for:
 - **Inflation** — rising costs over time
@@ -64,7 +63,7 @@ All calculations follow industry-standard financial formulas as specified in the
 | Frontend | Next.js 15, React, TypeScript |
 | Styling | CSS Modules, Montserrat font |
 | Charts | Recharts (AreaChart + PieChart) |
-| Runtime | Node.js 22.11.0 |
+| Runtime | Node.js 24.14.0 |
 | Package Manager | NPM 10.9.0 |
 
 ---
@@ -126,6 +125,11 @@ src/app/
 public/
 └── Calculator-rafiki.svg     # Hero illustration
 ```
+---
+
+## Demo video
+
+
 
 ---
 

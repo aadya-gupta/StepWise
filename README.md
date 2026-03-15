@@ -128,7 +128,8 @@ public/
 ---
 
 ## Demo video
-
+Click here to watch the demo!
+[![Watch the Demo](https://github.com/aadya-gupta/StepWise/blob/main/StepWise_calc.png)](https://drive.google.com/file/d/18ZWC2ca8QbfZMuWYaW7JVqhbTWsnGjML/view?usp=sharing)
 
 ---
 

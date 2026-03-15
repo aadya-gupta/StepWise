@@ -21,8 +21,6 @@ The calculator accounts for:
 
 **Goal-Based Investment Calculator**
 
-One of five permitted categories under the FinCal Innovation Hackathon guidelines.
-
 ---
 
 ## Financial Logic

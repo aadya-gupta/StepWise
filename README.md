@@ -153,7 +153,3 @@ All calculators and code are the intellectual property of HDFC AMC as per hackat
 
 
 *Illustration by [Storyset](https://storyset.com/work)*
-
-git add README.md
-git commit -m "Add README"
-git push

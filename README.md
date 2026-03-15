@@ -129,7 +129,7 @@ public/
 
 ## Demo video
 
-<video src="Demo_vdo.mp4" controls="controls" width="100%"></video>
+<video src="https://github.com/aadya-gupta/StepWise/raw/main/Demo_vdo.mp4" controls="controls" width="100%"></video>
 
 ---
 
